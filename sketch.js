@@ -1,4 +1,4 @@
-var hr,hourAngle;
+var hr,hrAngle;
 var min,minAngle;
 var sec,secAngle;
 
@@ -24,7 +24,7 @@ function draw() {
   //to create an rotation
   secAngle = map(sec,0,60,0,360);
   minAngle = map(min,0,60,0,360);
-  hourAngle = map(hr % 12,0,12,0,360);
+  hrAngle = map(hr % 12,0,12,0,360);
   
   //drawing seconds hand
   push();
@@ -44,7 +44,7 @@ function draw() {
 
   //drawing hour hand
   push();
-  rotate(hourAngle);
+  rotate(hrAngle);
   stroke(0,0,255);
   strokeWeight(7);
   line(0,0,50,0);
@@ -56,7 +56,6 @@ function draw() {
   //drawing the arcs
   strokeWeight(10);
   noFill();
-
   //seconds
   stroke(220,20,60);
   arc(0,0,300,300,0,secAngle);
@@ -67,7 +66,7 @@ function draw() {
   
   //hours
   stroke(0,0,255);
-  arc(0,0,280,280,0,hrAngle);
+  arc(0,0,260,260,0,hrAngle);
 
   drawSprites();
 }
